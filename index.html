@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+	<head>
+		<title>WCCC.TV</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="themes/wccctv.min.css">
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+		<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css">
+		<link rel="stylesheet" href="css/global.css">
+
+		<!-- Scripts -->
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+	
+	<body>
+		<!-- MAIN MENU -->
+		<aside data-role="panel" data-position="right" data-display="push" id="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home">home</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#live">live</a></li>
+				<li><a href="#programs">programs</a></li>
+				<li><a href="#talkshows">talk shows</a></li>
+				<li><a href="#shorts">shorts</a></li>
+				<li><a href="#citybeat">city beat</a></li>
+				<li><a href="#meetings">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about">about wccc.tv</a></li>
+				<li><a href="#terms">terms of use</a></li>
+				<li><a href="#webapp">our web app</a></li>
+			</ul>
+		</aside>
+		
+		<!-- HOME/FEATURED -->
+		<section data-role="page" data-theme="a" id="home" class="album-page">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content home-content">
+				<h1 class="page-title">Featured Videos</h1>
+				<h4 class="page-subtitle">See what's popular</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- LIVE -->
+		<section data-role="page" data-theme="a" id="live">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content">
+				<div class="container">
+					<div class="video">
+						<iframe src="//player.frontlayer.com/live/fl649215" width="100%" frameborder="0" class="livestream" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+					</div>
+					<div class="content">
+						<h1 class="single-video-title">WCCC.TV Live Stream</h1>
+						<p>Welcome to the WCCC.TV Live Stream. This is a live feed of our HD cable channel. Here you will see the shows we are airing right now!</p>
+						<p>You can also view this channel 24 hours a day on:</p>
+						<ul>
+							<li>Time Warner: Channel 10 (digital 10.10 without a cable box)</li>
+							<li>Grande: Channel 10</li>
+							<li>Grande: HD on Channel 810</li>
+						</ul>
+						<p>If you have issues with this stream for more than 5 minutes at a time, please <a href="http://wccc.tv/contact" target="_blank" class="external">let us know.</a></p>
+					</div>
+				</div>
+			</main>
+		</section>
+		
+		<!-- VIDEO -->
+		<section data-role="page" data-theme="a" id="video">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content video-content">
+				<div class="container">
+					<div id="vimeo">
+
+					</div>
+				</div>
+			</main>
+		</section>
+		
+		<!-- ALBUMS -->
+		<section data-role="page" data-theme="a" id="album" class="album-page">	
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content album-content">
+				<h1 class="page-title"></h1>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- PROGRAMS -->
+		<section data-role="page" data-theme="a" id="programs" class="album-page">	
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content programs-content">
+				<h1 class="page-title">Programs</h1>
+				<h4 class="page-subtitle">Select a program from these series topics.</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- TALKSHOWS -->
+		<section data-role="page" data-theme="a" id="talkshows" class="album-page">		
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content talkshows-content">
+				<h1 class="page-title">Talk Shows</h1>
+				<h4 class="page-subtitle">Select from these monthly talk show programs.</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- SHORTS -->
+		<section data-role="page" data-theme="a" id="shorts" class="album-page">		
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content shorts-content">
+				<h1 class="page-title">Shorts</h1>
+				<h4 class="page-subtitle">Select from numerous short videos from these topics.</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- CITY BEAT -->
+		<section data-role="page" data-theme="a" id="citybeat" class="album-page">	
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content citybeat-content">
+				<h1 class="page-title">City Beat</h1>
+				<h4 class="page-subtitle">See news and information about the City of Waco.</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+
+		<!-- MEETINGS -->
+		<section data-role="page" data-theme="a" id="meetings" class="album-page">		
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content meetings-content">
+				<h1 class="page-title">Meetings</h1>
+				<h4 class="page-subtitle">View Waco city council meetings, business sessions &amp; work sessions.</h4>
+				<ul class="video-list">
+				</ul>
+			</main>
+		</section>
+		
+		<!-- ABOUT -->
+		<section data-role="page" data-theme="a" id="about" class="about-page inside">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content inside-content">
+				<h1 class="page-title">About</h1>
+				<h4 class="page-subtitle">Who we are and what we do</h4>
+				<div class="content">
+					<p>The WCCC.TV app is a new way for our viewers to enjoy the Waco City Cable Channel programs from anywhere at anytime in full HD! The HTML5 powered application allows viewers to watch recent additions to our channel from any computer, tablet, smartphone or other mobile device.</p>
+					<p>Besides watching your favorite shows at anytime, you can also tune in to our Live Stream and view programs being aired right now. Our programs offer great entertainment for people of any age and the entire station airs only high quality, family-friendly programming all day long.</p>
+					<p>So kick back, relax, and enjoy the new WCCC.TV app - designed just for you!</p>
+					<h4><strong>History of WCCC.TV</strong></h4>
+					<p>In 1992, the City of Waco was provided with government access cable channels to use in its communication efforts. For several years, the Waco City Cable Channel aired City Council meetings, Plan Commission meetings and occasionally, a special production.</p>
+					<p>In 1999, WCCC.TV, the Waco City Cable Channel premiered a new look that would meet its mission statement: “To Educate, Inform, Entertain and Involve people in the City of Waco”.</p>
+					<p>In 2008, WCCC.TV transitioned into a new era, producing programs in high definition. In December, WCCC.TV became the first and only city channel in the state of Texas to broadcast in HD. And in September, 2010, WCCC.TV’s HD programming was made available to anyone in the world on our HD web-channel.</p>
+					<h4><strong>About The Waco City Cable Channel</strong></h4>
+					<p>The goal at the City of Waco is to make WCCC.TV a powerful communication tool by providing viewers informative and entertaining local programming they can’t find anywhere else. To accomplish this, the station must have a professional appearance and the dependability of a network station by filling every half hour with high quality productions that entertain as well as inform our citizens about their city.</p>
+					<p>To provide the variety of programs needed to attract and maintain a viewing audience, several series have been developed. Within these series, several programs, running five to twenty-five minutes, have been produced. Each week, two programs from each series air in what is called a program "block". Within these blocks are various PSA's, music videos and a variety of over twenty short segments topics, each with interesting videos, all in high definition. Just a few series examples are Waco, a Moment in Time, Good Gardening, Volunteers Make a Difference, Serve It Up Waco and Waco’s Myths and Legends.</p>
+					<p>You can tune into WCCC.TV to learn about our community in a personal way from people who care. Our producers are dedicated to bringing you the best in local programming with a variety of shows. City Beat, a weekly news program, covers city events and happenings, many of which are not covered by other local broadcast stations. Restaurant inspection scores, a city calendar and City of Waco job listings are also included in City Beat. You can learn about the wildlife, staff and volunteers at the Cameron Park Zoo in our award winning program, Step Into the Wild at the Cameron Park Zoo. WCCC.TV features Waco’s rich and unique past with Waco, Gateway to Texas History and Waco Remembers. In the series Know Your City, you can learn how the city and its various departments function, making Waco a great place to live.</p>
+					<h4><strong>Facilities</strong></h4>
+					<img src="images/studio.jpg" alt="WCCC.TV studio" class="img-responsive">
+					<p>From our studios in City Hall, WCCC.TV produces a variety of talk shows including the City Talk Radio Show, that airs on three local radio stations and is replayed several times each week on WCCC.TV. City Manager Larry Groth hosts Know Your City Staff, an opportunity to meet city department directors and discover how the department functions. WCCC.TV also produces 30 minute monthly talk shows for the Greater Waco Chamber of Commerce, the Cen-Tex African-American Chamber of Commerce, the Cen-Tex Hispanic Chamber of Commerce, the Waco-McLennan County Public Health District and a program that features Waco’s Police, Fire and Emergency Management staff.</p>
+					<p>WCCC.TV also produces The Waco City Council and Plan Commission meetings in HD and replays them several times each week. Unlike other TV stations, WCCC.TV records entire news conferences and special presentations to bring you the complete story. During severe weather alerts, viewers can see the same live weather radar and hear live reports from the amateur radio storm spotters that the staff in the Emergency Operations Center receive.</p>
+					<p>The quality of programs produced by WCCC.TV has earned several awards, including numerous Telly Awards received each year since 2004, and the Beacon Award - ranking WCCC.TV among the top three best city cable channels in the nation.</p>
+					<p>After you watch the Waco City Cable Channel and see the variety and quality of programming offered, you will become a member of our ever growing audience. Available in HD on Grande channel 810, in SD on Grande and Time Warner channel 10, and in HD from anywhere in the world on our web-channel and mobile apps.</p>
+				</div>
+			</main>
+		</section>
+		
+		<!-- TERMS OF USE -->
+		<section data-role="page" data-theme="a" id="terms" class="terms-page inside">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content inside-content">
+				<h1 class="page-title">Terms and Conditions of Use</h1>
+				<h4 class="page-subtitle">Some important things to know about using our apps</h4>
+				<div class="content">
+					<h4>1. Terms</h4>
+					<p>By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law.</p>
+					<h4>2. Use License</h4>
+					<p>Permission is granted to temporarily download one copy of the materials (information or software) on Waco City Cable Channel's web site for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+					<ul>
+						<li>modify or copy the materials;</li>
+						<li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+						<li>attempt to decompile or reverse engineer any software contained on Waco City Cable Channel's web site;</li>
+						<li>remove any copyright or other proprietary notations from the materials; or</li>
+						<li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+					</ul>
+					<p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by Waco City Cable Channel at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
+					<h4>3. Disclaimer</h4>
+					<p>The materials on Waco City Cable Channel's web site are provided "as is". Waco City Cable Channel makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, Waco City Cable Channel does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating to such materials or on any sites linked to this site.</p>
+					<h4>4. Limitations</h4>
+					<p>In no event shall Waco City Cable Channel or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on Waco City Cable Channel's Internet site, even if Waco City Cable Channel or a Waco City Cable Channel authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+					<h4>5. Revisions and Errata</h4>
+					<p>The materials appearing on Waco City Cable Channel's web site could include technical, typographical, or photographic errors. Waco City Cable Channel does not warrant that any of the materials on its web site are accurate, complete, or current. Waco City Cable Channel may make changes to the materials contained on its web site at any time without notice. Waco City Cable Channel does not, however, make any commitment to update the materials.</p>
+					<h4>6. Links</h4>
+					<p>Waco City Cable Channel has not reviewed all of the sites linked to its Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Waco City Cable Channel of the site. Use of any such linked web site is at the user's own risk.</p>
+					<h4>7. Site Terms of Use Modifications</h4>
+					<p>Waco City Cable Channel may revise these terms of use for its web site at any time without notice. By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.</p>
+					<h4>8. Governing Law</h4>
+					<p>Any claim relating to Waco City Cable Channel's web site shall be governed by the laws of the State of Texas without regard to its conflict of law provisions.</p>
+					<hr>
+					<h3>General Terms and Conditions applicable to Use of a Web Site.</h3>
+					<h4>Privacy Policy</h4>
+					<p>Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.</p>
+					<p>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</p>
+					<p>We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.</p>
+					<p>We will only retain personal information as long as necessary for the fulfillment of those purposes.</p>
+					<p>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</p>
+					<p>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</p>
+					<p>We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
+					<p>We will make readily available to customers information about our policies and practices relating to the management of personal information.</p>
+					<p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</p>
+				</div>
+			</main>
+		</section>
+
+		<!-- WEB APP -->
+		<section data-role="page" data-theme="a" id="webapp" class="webapp-page inside">
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<main role="main" class="ui-content inside-content">
+				<h1 class="page-title">WCCC.TV Web App</h1>
+				<h4 class="page-subtitle">Check out our web application</h4>
+				<div class="content">
+					<p>The WCCC.TV web app offers the full experience of WCCC.TV. The app gives you access to hundreds of videos and albums via our beautiful, responsive website. The site is designed to work perfectly on any modern device or browser including desktops, tablets, smartphones, and more.</p>
+					<p>Enjoy the wccc.tv web app today!</p>
+					<p class="btn"><a href="http://wccc.tv" class="external">Take me to the web app</a></p>
+				</div>
+			</main>
+		</section>
+	</body>
+</html>
