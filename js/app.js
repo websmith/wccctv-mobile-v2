@@ -108,7 +108,6 @@ function programs() {
 			'1926451'
 		];
 
-
 	$(el).html('');
 
 	$.each(albums, function(key, value) {
