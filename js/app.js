@@ -77,7 +77,7 @@ function featured() {
 		vids = [],
 		api = 'https://vimeo.com/api/v2/'+request+'/'+id+'/videos.json';
 	
-	//$(el).html('');
+	$(el).html('');
 
 	$.ajax({
 		url: api,
