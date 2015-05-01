@@ -36,12 +36,9 @@
 	<gap:splash src="img/startup/startup-ipad-large-landscape.png" gap:platform="ios" width="2048" height="1496" />
 	<gap:splash src="img/startup/startup-ipad-large-portrait.png" width="1536" height="2008" />
 
-	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
-
 	<preference name="permissions" value="none" />
 	<preference name="exit-on-suspend" value="false" />
 	<preference name="stay-in-webview" value="false" />
-	<preference name="StatusBarBackgroundColor" value="#ffffff" />
 
 	<access origin="*" />
 

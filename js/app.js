@@ -14,7 +14,7 @@ function loadVideo(id) {
 		api = 'https://vimeo.com/api/v2/video/'+id+'.json';
 
 	$(el).html('');
-	
+
 	$.ajax({
 		url: api,
 		type: 'get',
