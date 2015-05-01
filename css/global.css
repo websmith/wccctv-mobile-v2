@@ -21,7 +21,7 @@ header .menu-btn { margin: 5px !important; }
 .page-title { text-align: center; font-size: 30px; letter-spacing: 1px; font-weight: 100; font-family: 'open_sanslight'; margin: 0; color: white; }
 .page-subtitle { text-align: center; font-family: 'open_sanslight'; margin: 0 0 20px; color: white; }
 .single-video-title { text-align: center; font-family: 'open_sanslight'; line-height: 1.3; font-family: 'open_sanslight'; font-size: 2em; } 
-ul.video-list { padding: 0; list-style: none; }
+ul.video-list { padding: 0; list-style: none; position: relative; }
 li.video-list-item { display: block; }
 li.video-list-item > a:after { content: ""; display: block; clear: both; }
 .video-list-item > a { display: block; border: 0 none; margin: 12px 0; color: #06101E; overflow: hidden; z-index: 1; position: relative; height: 90px; background-color: rgba(255, 255, 255, 0.9); -webkit-transition: .3s all ease-in-out; transition: .3s all ease-in-out; }
