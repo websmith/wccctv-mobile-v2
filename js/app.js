@@ -371,9 +371,3 @@ $(document).on('click', ".external", function(e) {
 	var targetURL = $(this).attr("href");
 	window.open(targetURL, "_system");
 });
-  
-$(document).on('deviceready', function(){
-	if (parseFloat(window.device.version) >= 7.0) {
-          document.body.style.marginTop = "20px";
-    }
-}, false);
