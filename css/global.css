@@ -7,8 +7,7 @@
 /* GLOBAL */
 body, input, select, textarea, button, .ui-btn { font-family: 'open_sansregular' !important; }
 a { text-decoration: none; }
-.ui-mobile-viewport.ui-overlay-a { background: url(../images/video-bg.png) #050e1b repeat; }
-.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper { background-color: transparent; }
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper { background: url(../images/video-bg.png) #050e1b repeat; }
 
 /* HEADER */
 header .logo { display: block; padding: 6px; width: 170px; margin-right: 10px; }
