@@ -375,7 +375,8 @@ $(document).on('click', ".external", function(e) {
 /* CUSTOM STATUS BAR (using phonegap status bar plugin) */
 document.addEventListener("deviceready", function(e) {	
 	StatusBar.show();
-	StatusBar.overlaysWebView(true);
-	StatusBar.backgroundColorByHexString('#06101e');
-	StatusBar.styleLightContent();
+	StatusBar.styleBlackTranslucent();
+	//StatusBar.overlaysWebView(false);
+	//StatusBar.backgroundColorByHexString('#06101e');
+	//StatusBar.style();
 }, false);
