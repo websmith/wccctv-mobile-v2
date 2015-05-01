@@ -373,12 +373,10 @@ $(document).on('click', ".external", function(e) {
 });
 
 /* CUSTOM STATUS BAR (using phonegap status bar plugin) */
-var g_overlay = false,
-	backround_color = "#06101e";
 
-$(document).on("deviceready", function() {
+document.addEventListener("deviceready", function(e) {	
 	StatusBar.show();
-	StatusBar.overlaysWebView(g_overlay);
-	StatusBar.backgroundColorByName(g_color);
+	StatusBar.overlaysWebView(false);
+	StatusBar.backgroundColorByName('#06101e');
 	StatusBar.styleLightContent();
 }, false);
