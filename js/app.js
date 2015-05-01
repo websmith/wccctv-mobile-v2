@@ -371,3 +371,14 @@ $(document).on('click', ".external", function(e) {
 	var targetURL = $(this).attr("href");
 	window.open(targetURL, "_system");
 });
+
+/* CUSTOM STATUS BAR (using phonegap status bar plugin) */
+var g_overlay = false,
+	backround_color = "#06101e";
+
+$(document).on("deviceready", function() {
+	StatusBar.show();
+	StatusBar.overlaysWebView(g_overlay);
+	StatusBar.backgroundColorByName(g_color);
+	StatusBar.styleLightContent();
+}, false);

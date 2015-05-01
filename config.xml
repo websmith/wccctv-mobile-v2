@@ -41,8 +41,6 @@
 	<preference name="permissions" value="none" />
 	<preference name="exit-on-suspend" value="false" />
 	<preference name="stay-in-webview" value="false" />
-	<preference name="StatusBarBackgroundColor" value="#06101e" />
-	<preference name="StatusBarStyleLightContent" />
 
 	<access origin="*" />
 
