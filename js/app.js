@@ -22,7 +22,7 @@ function loadVideo(id) {
 		complete: function(data) {
 			var video = JSON.parse(data.responseText);
 			
-			$(el).append('<div class="video"><iframe src="//player.vimeo.com/video/'+ video[0].id +'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;color=ffffff" class="vimeo-iframe" color="ffffff" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="vimeo-iframe"></iframe></div><div class="content"><h1 class="single-video-title">'+video[0].title+'</h1><p class="v-duration">Duration: '+convertTime(video[0].duration)+'</p><p class="v-desc">'+stripQuotes(video[0].description)+'</p>');
+			$(el).append('<div class="video"><iframe src="http://player.vimeo.com/video/'+ video[0].id +'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;color=ffffff" class="vimeo-iframe" color="ffffff" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="vimeo-iframe"></iframe></div><div class="content"><h1 class="single-video-title">'+video[0].title+'</h1><p class="v-duration">Duration: '+convertTime(video[0].duration)+'</p><p class="v-desc">'+stripQuotes(video[0].description)+'</p>');
 			
 			var ratio = .567,
 				livewidth = $('.vimeo-iframe').width();
