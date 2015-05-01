@@ -376,7 +376,6 @@ $(document).on('click', ".external", function(e) {
 document.addEventListener("deviceready", function(e) {	
 	StatusBar.show();
 	StatusBar.overlaysWebView(false);
-	StatusBar.backgroundColorByName("red");
 	StatusBar.styleLightContent();
-	//StatusBar.backgroundColorByHexString("#06101e");
+	StatusBar.backgroundColorByHexString("#06101e");
 }, false);
