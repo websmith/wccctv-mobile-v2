@@ -52,8 +52,10 @@ function loadAlbum(id, title) {
 		complete: function(data){
 			var video = JSON.parse(data.responseText);
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
+
+			renderVids(vids, el);
 			
 			$('.album-content .page-title').html(title);
 		}
@@ -84,8 +86,10 @@ function featured() {
 		complete: function(data){
 			var video = JSON.parse(data.responseText);
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
+
+			renderVids(vids, el);
 		}
 	});
 }
@@ -113,7 +117,11 @@ function programs() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -145,7 +153,11 @@ function talkshows() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+				
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -184,7 +196,11 @@ function shorts() {
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
 				
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+				
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -206,8 +222,10 @@ function citybeat() {
 			var video = JSON.parse(data.responseText);
 
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
+			
+			renderVids(vids, el);
 		}
 	});
 }
@@ -230,7 +248,12 @@ function meetings() {
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
 				
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+				
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
+
 			}
 		});
 	});
