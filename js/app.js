@@ -9,6 +9,20 @@ function stripQuotes(str) {
 	return (str=str.replace('<br/>',''));
 }
 
+function renderVids(vids, el) {
+	$.each(vids, function(i){
+		setTimeout(function(){
+			$(el).append(vids[i].fadeIn(200));
+		}, 120 * i );
+	});
+}
+
+function home() {
+	$('#home .page-title').hide().delay(300).fadeIn();
+	$('#home .page-subtitle').hide().delay(600).fadeIn();
+	$('#home .home-list-item').hide().delay(1000).fadeIn();
+}
+
 function loadVideo(id) {
 	var el = '#video #vimeo',
 		api = 'https://vimeo.com/api/v2/video/'+id+'.json';
@@ -22,7 +36,7 @@ function loadVideo(id) {
 		complete: function(data) {
 			var video = JSON.parse(data.responseText);
 			
-			$(el).append('<div class="video"><iframe src="http://player.vimeo.com/video/'+ video[0].id +'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;color=ffffff" class="vimeo-iframe" color="ffffff" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="vimeo-iframe"></iframe></div><div class="content"><h1 class="single-video-title">'+video[0].title+'</h1><p class="v-duration">Duration: '+convertTime(video[0].duration)+'</p><p class="v-desc">'+stripQuotes(video[0].description)+'</p>');
+			$(el).append('<div class="video"><iframe src="http://player.vimeo.com/video/'+ video[0].id +'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;color=ffffff" class="vimeo-iframe" color="ffffff" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="vimeo-iframe"></iframe></div><div class="video-info"><h1 class="single-video-title">'+video[0].title+'</h1><p class="v-duration">Duration: '+convertTime(video[0].duration)+'</p><p class="v-desc">'+stripQuotes(video[0].description)+'</p>');
 			
 			var ratio = .567,
 				livewidth = $('.vimeo-iframe').width();
@@ -39,8 +53,8 @@ function loadVideo(id) {
 
 function loadAlbum(id, title) {
 	var request = 'album',
-		vids = [],
 		el = '#album .video-list',
+		vids = [],
 		api = 'https://vimeo.com/api/v2/'+request+'/'+id+'/videos.json';
 	
 	$(el).html('');
@@ -52,27 +66,20 @@ function loadAlbum(id, title) {
 		complete: function(data){
 			var video = JSON.parse(data.responseText);
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
 			
+			renderVids(vids, el);
 			$('.album-content .page-title').html(title);
 		}
-	});
-}
-
-function renderVids(vids, el) {
-	$.each(vids, function(i){
-		setTimeout(function(){
-			$(el).append(vids[i].fadeIn(200));
-		}, 120 * i );
 	});
 }
 
 function featured() {
 	var request = 'channel',
 		id = '380729',
-		el = '#home .video-list',
-		vids = [],
+		el = '#featured .video-list',
+		vids = [];
 		api = 'https://vimeo.com/api/v2/'+request+'/'+id+'/videos.json';
 	
 	$(el).html('');
@@ -84,8 +91,10 @@ function featured() {
 		complete: function(data){
 			var video = JSON.parse(data.responseText);
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
+			
+			renderVids(vids, el);
 		}
 	});
 }
@@ -113,7 +122,11 @@ function programs() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -145,7 +158,11 @@ function talkshows() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+				
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -184,7 +201,11 @@ function shorts() {
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
 				
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
@@ -206,8 +227,10 @@ function citybeat() {
 			var video = JSON.parse(data.responseText);
 
 			$.each(video, function(key, value) {
-				$(el).append('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
+			
+			renderVids(vids, el);
 		}
 	});
 }
@@ -230,23 +253,24 @@ function meetings() {
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
 				
-				$(el).append('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>');
+				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
+				
+				setTimeout(function(){
+					$(el).append(vids[key].fadeIn(200));
+				}, 120 * key );
 			}
 		});
 	});
 }
 
-/* Pageload functions */
-$(function() {
-	$("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
-	$("[data-role=panel]").panel().enhanceWithin();
+$(document).on('pageshow', '#home', function(){
+	home();
 });
 
-$(document).on("pagecreate", function (){
-	$("[data-role=panel]").one("panelbeforeopen", function () {
-		var height = $.mobile.pageContainer.pagecontainer("getActivePage").outerHeight();
-		$(".ui-panel-wrapper").css("height", height + 1);
-	});
+$(document).on('pagehide', '#home', function(){ 
+    $('#home .page-title').hide();
+	$('#home .page-subtitle').hide();
+	$('#home .home-list-item').hide();
 });
 
 $(document).on('pageshow', '#video', function(){
@@ -265,13 +289,13 @@ $(document).on('pagehide', '#album', function(){
     $('#album .video-list').empty();
 });
 
-$(document).on('pagehide', '#home', function(){ 
-    $('#home .video-list').empty();
+$(document).on('pagehide', '#featured', function(){ 
+    $('#featured .video-list').empty();
 });
 
-$(document).on('pageshow', '#home', function(){
+$(document).on('pageshow', '#featured', function(){
 	featured();
-	$('#home').trigger('create');
+	$('#featured').trigger('create');
 });
 
 $(document).on('pageshow', '#live',  function(){

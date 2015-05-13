@@ -17,46 +17,143 @@
 		<script src="js/helper.js"></script>
 		<script src="js/app.js"></script>
 	</head>
-	
+
 	<body>
-		<!-- MAIN MENU -->
-		<aside data-role="panel" data-position="right" data-display="push" id="mainmenu">
-			<ul data-role="listview" data-inset="false" data-icon="false">
-				<li><a href="#home" data-transition="fade">home</a></li>
-				<li data-role="list-divider">watch</li>
-				<li><a href="#live" data-transition="fade">live</a></li>
-				<li><a href="#programs" data-transition="fade">programs</a></li>
-				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-				<li><a href="#shorts" data-transition="fade">shorts</a></li>
-				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-				<li><a href="#meetings" data-transition="fade">meetings</a></li>
-				<li data-role="list-divider">discover</li>
-				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-				<li><a href="#terms" data-transition="fade">terms of use</a></li>
-				<li><a href="#webapp" data-transition="fade">our web app</a></li>
-			</ul>
-		</aside>
-		
-		<!-- HOME/FEATURED -->
+		<!-- HOME -->
 		<section data-role="page" data-theme="a" id="home" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="homeMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#homeMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content home-content">
+				<h1 class="page-title">Welcome to WCCC.TV</h1>
+				<h4 class="page-subtitle">Select an option below or use the menu to the right to get started</h4>
+				<ul class="home-list">
+					<li class="featured-button home-list-item">
+						<a href="#featured">
+							<span class="featured-icon home-button-icon"></span>
+							<h3>Featured Videos</h3>
+							<p>See what's popular</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#live">
+							<span class="live-icon home-button-icon"></span>
+							<h3>Live Stream</h3>
+							<p>Watch our channel live!</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#programs">
+							<span class="programs-icon home-button-icon"></span>
+							<h3>Programs</h3>
+							<p>View popular programming</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#talkshows">
+							<span class="talkshows-icon home-button-icon"></span>
+							<h3>Talk Shows</h3>
+							<p>Check out our monthly talk shows</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#citybeat">
+							<span class="citybeat-icon home-button-icon"></span>
+							<h3>City Beat</h3>
+							<p>Learn what's happening around town</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#shorts">
+							<span class="shorts-icon home-button-icon"></span>
+							<h3>Shorts</h3>
+							<p>Enjoy our short series videos</p>
+						</a>
+					</li>
+					<li class="featured-button home-list-item">
+						<a href="#meetings">
+							<span class="meetings-icon home-button-icon"></span>
+							<h3>Meetings</h3>
+							<p>Choose from a variety of official city meetings</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- FEATURED -->
+		<section data-role="page" data-theme="a" id="featured" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="featuredMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
+			<header data-role="header">
+				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+				<a href="#featuredMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<div class="cl"></div>
+			</header>
+			<div role="main" class="ui-content featured-content">
 				<h1 class="page-title">Featured Videos</h1>
 				<h4 class="page-subtitle">See what's popular</h4>
 				<ul class="video-list">
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- LIVE -->
 		<section data-role="page" data-theme="a" id="live">
+			<aside data-role="panel" data-position="right" data-display="push" id="liveMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#liveMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content">
@@ -64,7 +161,7 @@
 					<div class="video">
 						<iframe src="http://player.frontlayer.com/live/fl649215" width="100%" frameborder="0" class="livestream" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 					</div>
-					<div class="content">
+					<div class="video-info">
 						<h1 class="single-video-title">WCCC.TV Live Stream</h1>
 						<p>Welcome to the WCCC.TV Live Stream. This is a live feed of our HD cable channel. Here you will see the shows we are airing right now!</p>
 						<p>You can also view this channel 24 hours a day on:</p>
@@ -78,12 +175,29 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- VIDEO -->
 		<section data-role="page" data-theme="a" id="video">
+			<aside data-role="panel" data-position="right" data-display="push" id="videoMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#videoMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content video-content">
@@ -94,12 +208,29 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- ALBUMS -->
-		<section data-role="page" data-theme="a" id="album" class="album-page">	
+		<section data-role="page" data-theme="a" id="album" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="albumMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#albumMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content album-content">
@@ -108,12 +239,29 @@
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- PROGRAMS -->
-		<section data-role="page" data-theme="a" id="programs" class="album-page">	
+		<section data-role="page" data-theme="a" id="programs" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="programsMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#programsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content programs-content">
@@ -123,12 +271,29 @@
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- TALKSHOWS -->
-		<section data-role="page" data-theme="a" id="talkshows" class="album-page">		
+		<section data-role="page" data-theme="a" id="talkshows" class="album-page">	
+			<aside data-role="panel" data-position="right" data-display="push" id="talkshowsMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#talkshowsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content talkshows-content">
@@ -138,12 +303,29 @@
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- SHORTS -->
-		<section data-role="page" data-theme="a" id="shorts" class="album-page">		
+		<section data-role="page" data-theme="a" id="shorts" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="shortsMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#shortsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content shorts-content">
@@ -153,12 +335,29 @@
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- CITY BEAT -->
-		<section data-role="page" data-theme="a" id="citybeat" class="album-page">	
+		<section data-role="page" data-theme="a" id="citybeat" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="citybeatMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#citybeatMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content citybeat-content">
@@ -170,10 +369,27 @@
 		</section>
 
 		<!-- MEETINGS -->
-		<section data-role="page" data-theme="a" id="meetings" class="album-page">		
+		<section data-role="page" data-theme="a" id="meetings" class="album-page">
+			<aside data-role="panel" data-position="right" data-display="push" id="meetingsMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#meetingsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content meetings-content">
@@ -183,12 +399,29 @@
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- ABOUT -->
 		<section data-role="page" data-theme="a" id="about" class="about-page inside">
+			<aside data-role="panel" data-position="right" data-display="push" id="aboutMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#aboutMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content inside-content">
@@ -215,12 +448,29 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- TERMS OF USE -->
 		<section data-role="page" data-theme="a" id="terms" class="terms-page inside">
+			<aside data-role="panel" data-position="right" data-display="push" id="termsMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#termsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content inside-content">
@@ -269,9 +519,26 @@
 
 		<!-- WEB APP -->
 		<section data-role="page" data-theme="a" id="webapp" class="webapp-page inside">
+			<aside data-role="panel" data-position="right" data-display="push" id="webappMenu" class="mainmenu">
+				<ul data-role="listview" data-inset="false" data-icon="false">
+					<li><a href="#home" data-transition="fade">home</a></li>
+					<li><a href="#featured" data-transition="fade">featured</a></li>
+					<li><a href="#live" data-transition="fade">live</a></li>
+					<li data-role="list-divider">watch</li>
+					<li><a href="#programs" data-transition="fade">programs</a></li>
+					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+					<li><a href="#shorts" data-transition="fade">shorts</a></li>
+					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+					<li><a href="#meetings" data-transition="fade">meetings</a></li>
+					<li data-role="list-divider">discover</li>
+					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+					<li><a href="#terms" data-transition="fade">terms of use</a></li>
+					<li><a href="#webapp" data-transition="fade">our web app</a></li>
+				</ul>
+			</aside>
 			<header data-role="header">
 				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#mainmenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
+				<a href="#webappMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
 				<div class="cl"></div>
 			</header>
 			<div role="main" class="ui-content inside-content">
