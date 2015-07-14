@@ -67,7 +67,7 @@ function loadAlbum(id, title) {
 			var video = JSON.parse(data.responseText);
 			$.each(video, function(key, value) {
 				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
-			});
+		});
 			
 			renderVids(vids, el);
 			$('.album-content .page-title').html(title);
@@ -146,7 +146,8 @@ function talkshows() {
 			'1926477',
 			'1926478',
 			'1926475',
-			'1926485'
+			'1926485',
+			'3237290'
 		];
 	
 	$(el).html('');
