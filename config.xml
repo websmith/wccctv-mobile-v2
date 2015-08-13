@@ -3,7 +3,7 @@
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id = "com.holeintheroof.wccctv"
 		versionCode = "9" 
-		version     = "2.1">
+		version     = "2.2">
 
 	<gap:platform name="ios" />
 	<gap:platform name="android" /> 
