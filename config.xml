@@ -41,7 +41,7 @@
 	<preference name="phonegap-version" value="cli-5.1.1" />
 	<preference name="orientation" value="portrait" />
 	<preference name="permissions" value="none" />
-	<preference name="exit-on-suspend" value="false" />
+	<preference name="exit-on-suspend" value="true" />
 	<preference name="stay-in-webview" value="false" />
 
 	<access origin="*" />
