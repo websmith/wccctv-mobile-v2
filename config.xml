@@ -2,23 +2,23 @@
 <widget xmlns   	= "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id = "com.holeintheroof.wccctv"
-		versionCode = "10" 
-		version     = "2.2">
+		versionCode = "11"
+		version     = "2.3">
 
 	<gap:platform name="ios" />
-	<gap:platform name="android" /> 
+	<gap:platform name="android" />
 
 	<name>WCCC.TV</name>
 
 	<description>
 		Download the WCCC.TV mobile app to have featured videos available right from your mobile device.
-		Learn more on our website: http://wccc.tv    
+		Learn more on our website: http://wccc.tv
 	</description>
 
-	<author href="http://holeintheroof.com" email="nate@holeintheroof.com">
-		Hole in the Roof Marketing, Inc.
+	<author href="http://apparatusagency.com" email="nate@apparatusagency.com">
+		Apparatus Digital Creative Agency
 	</author>
-	
+
 	<icon src="images/touch/icon-android.png" gap:platform="android" />
 	<icon src="images/touch/icon-non-retina.png" gap:platform="ios" width="57" height="57" />
 	<icon src="images/touch/icon-iphone-retina.png" gap:platform="ios" width="72" height="72" />
@@ -35,10 +35,10 @@
 	<gap:splash src="images/startup/startup-ipad-portrait.png" width="768" height="1004" />
 	<gap:splash src="images/startup/startup-ipad-large-landscape.png" gap:platform="ios" width="2048" height="1496" />
 	<gap:splash src="images/startup/startup-ipad-large-portrait.png" width="1536" height="2008" />
-	
+
 	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
 
-	<preference name="phonegap-version" value="cli-5.1.1" />
+	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="orientation" value="portrait" />
 	<preference name="permissions" value="none" />
 	<preference name="exit-on-suspend" value="true" />

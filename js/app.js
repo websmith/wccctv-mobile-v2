@@ -1,4 +1,4 @@
-function convertTime(duration) { 
+function convertTime(duration) {
 	var v_minutes = parseInt(duration / 60, 10) % 60;
 	var v_seconds = duration % 60;
 	var v_playtime = (v_minutes < 10 ? "0" + v_minutes : v_minutes) + ":" + (v_seconds < 10 ? "0" + v_seconds : v_seconds);
@@ -35,12 +35,12 @@ function loadVideo(id) {
 		timeout: 1500,
 		complete: function(data) {
 			var video = JSON.parse(data.responseText);
-			
+
 			$(el).append('<div class="video"><iframe src="http://player.vimeo.com/video/'+ video[0].id +'?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;color=ffffff" class="vimeo-iframe" color="ffffff" width="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="vimeo-iframe"></iframe></div><div class="video-info"><h1 class="single-video-title">'+video[0].title+'</h1><p class="v-duration">Duration: '+convertTime(video[0].duration)+'</p><p class="v-desc">'+stripQuotes(video[0].description)+'</p>');
-			
-			var ratio = .567,
+
+			var ratio = 0.567,
 				livewidth = $('.vimeo-iframe').width();
-			
+
 			$('.vimeo-iframe').attr("height", livewidth*ratio);
 
 			$(window).resize(function(){
@@ -56,7 +56,7 @@ function loadAlbum(id, title) {
 		el = '#album .video-list',
 		vids = [],
 		api = 'https://vimeo.com/api/v2/'+request+'/'+id+'/videos.json';
-	
+
 	$(el).html('');
 
 	$.ajax({
@@ -68,7 +68,7 @@ function loadAlbum(id, title) {
 			$.each(video, function(key, value) {
 				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 		});
-			
+
 			renderVids(vids, el);
 			$('.album-content .page-title').html(title);
 		}
@@ -81,7 +81,7 @@ function featured() {
 		el = '#featured .video-list',
 		vids = [];
 		api = 'https://vimeo.com/api/v2/'+request+'/'+id+'/videos.json';
-	
+
 	$(el).html('');
 
 	$.ajax({
@@ -93,7 +93,7 @@ function featured() {
 			$.each(video, function(key, value) {
 				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
-			
+
 			renderVids(vids, el);
 		}
 	});
@@ -149,7 +149,7 @@ function talkshows() {
 			'1926485',
 			'3237290'
 		];
-	
+
 	$(el).html('');
 
 	$.each(albums, function(key, value) {
@@ -160,7 +160,7 @@ function talkshows() {
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
 				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
-				
+
 				setTimeout(function(){
 					$(el).append(vids[key].fadeIn(200));
 				}, 120 * key );
@@ -191,7 +191,7 @@ function shorts() {
 			'1914812',
 			'1982302'
 		];
-	
+
 	$(el).html('');
 
 	$.each(albums, function(key, value) {
@@ -201,7 +201,7 @@ function shorts() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				
+
 				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
 
 				setTimeout(function(){
@@ -230,7 +230,7 @@ function citybeat() {
 			$.each(video, function(key, value) {
 				vids[key] = $('<li class="video-list-item"><a href="#video" data-videoid="'+value.id+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+value.thumbnail_medium+'" class="video-list-thumb" alt="'+value.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+value.title+'</h2><p class="video-list-desc">'+value.description+'</p></div></a></li>').hide();
 			});
-			
+
 			renderVids(vids, el);
 		}
 	});
@@ -245,7 +245,7 @@ function meetings() {
 		vids = [];
 
 	$(el).html('');
-	
+
 	$.each(albums, function(key, value) {
 		$.ajax({
 			url: 'https://vimeo.com/api/v2/album/'+albums[key]+'/info.json',
@@ -253,9 +253,9 @@ function meetings() {
 			timeout: 1500,
 			complete: function(data) {
 				var album = JSON.parse(data.responseText);
-				
+
 				vids[key] = $('<li class="video-list-item"><a href="#album" data-albumid="'+album.id+'" data-albumtitle="'+album.title+'" class="thumb" data-transition="fade"><div class="video-wrapper"><img src="'+album.thumbnail_medium+'" class="video-list-thumb" alt="'+album.title+'"></div><div class="video-list-item-content"><h2 class="video-list-title">'+album.title+'</h2><p class="video-list-desc">'+album.description+'</p></div></a></li>').hide();
-				
+
 				setTimeout(function(){
 					$(el).append(vids[key].fadeIn(200));
 				}, 120 * key );
@@ -268,7 +268,7 @@ $(document).on('pageshow', '#home', function(){
 	home();
 });
 
-$(document).on('pagehide', '#home', function(){ 
+$(document).on('pagehide', '#home', function(){
     $('#home .page-title').hide();
 	$('#home .page-subtitle').hide();
 	$('#home .home-list-item').hide();
@@ -278,7 +278,7 @@ $(document).on('pageshow', '#video', function(){
 	loadVideo(localStorage.getItem("video_id"));
 });
 
-$(document).on('pagehide', '#video', function(){ 
+$(document).on('pagehide', '#video', function(){
     $('#video #vimeo').empty();
 });
 
@@ -286,11 +286,11 @@ $(document).on('pageshow', '#album', function(){
 	loadAlbum(localStorage.getItem("album_id"), localStorage.getItem("album_title"));
 });
 
-$(document).on('pagehide', '#album', function(){ 
+$(document).on('pagehide', '#album', function(){
     $('#album .video-list').empty();
 });
 
-$(document).on('pagehide', '#featured', function(){ 
+$(document).on('pagehide', '#featured', function(){
     $('#featured .video-list').empty();
 });
 
@@ -316,7 +316,7 @@ $(document).on('pageshow', '#programs', function(){
 	$('#programs').trigger('create');
 });
 
-$(document).on('pagehide', '#programs', function(){ 
+$(document).on('pagehide', '#programs', function(){
     $('#programs .video-list').empty();
 });
 
@@ -325,7 +325,7 @@ $(document).on('pageshow', '#talkshows', function(){
 	$('#talkshows').trigger('create');
 });
 
-$(document).on('pagehide', '#talkshows', function(){ 
+$(document).on('pagehide', '#talkshows', function(){
     $('#talkshows .video-list').empty();
 });
 
@@ -334,7 +334,7 @@ $(document).on('pageshow', '#shorts', function(){
 	$('#shorts').trigger('create');
 });
 
-$(document).on('pagehide', '#shows', function(){ 
+$(document).on('pagehide', '#shows', function(){
     $('#shows .video-list').empty();
 });
 
@@ -343,7 +343,7 @@ $(document).on('pageshow', '#citybeat', function(){
 	$('#citybeat').trigger('create');
 });
 
-$(document).on('pagehide', '#citybeat', function(){ 
+$(document).on('pagehide', '#citybeat', function(){
     $('#citybeat .video-list').empty();
 });
 
@@ -352,7 +352,7 @@ $(document).on('pageshow', '#meetings', function(){
 	$('#meetings').trigger('create');
 });
 
-$(document).on('pagehide', '#meetings', function(){ 
+$(document).on('pagehide', '#meetings', function(){
     $('#meetings .video-list').empty();
 });
 
@@ -375,7 +375,7 @@ $(document).on('click', ".external", function(e) {
 });
 
 /* CUSTOM STATUS BAR (using phonegap status bar plugin) */
-document.addEventListener("deviceready", function(e) {	
+document.addEventListener("deviceready", function(e) {
 	StatusBar.show();
 	StatusBar.overlaysWebView(false);
 	StatusBar.styleLightContent();
