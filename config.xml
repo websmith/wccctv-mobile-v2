@@ -44,6 +44,8 @@
 	<preference name="exit-on-suspend" value="true" />
 	<preference name="stay-in-webview" value="false" />
 
+	<allow-navigation href="*" />
+	<allow-intent href="*" />
 	<access origin="*" />
 
 </widget>
