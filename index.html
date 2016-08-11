@@ -4,7 +4,7 @@
 		<title>WCCC.TV</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'self' 'unsafe-inline' 'unsafe-eval'; script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
-		
+
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="themes/wccctv.min.css">
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
@@ -16,6 +16,13 @@
 		<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
+		<script>
+			var app_version = "2.4.2";
+			
+			$(document).ready(function(){
+				$('.app-version').html(app_version);
+			});
+		</script>
 	</head>
 
 	<body>
@@ -427,6 +434,7 @@
 			<div role="main" class="ui-content inside-content">
 				<h1 class="page-title">About</h1>
 				<h4 class="page-subtitle">Who we are and what we do</h4>
+				<h5 class="page-subtitle">App Version: <span class="app-version"></span></h5>
 				<div class="content">
 					<p>The WCCC.TV app is a new way for our viewers to enjoy the Waco City Cable Channel programs from anywhere at anytime in full HD! The HTML5 powered application allows viewers to watch recent additions to our channel from any computer, tablet, smartphone or other mobile device.</p>
 					<p>Besides watching your favorite shows at anytime, you can also tune in to our Live Stream and view programs being aired right now. Our programs offer great entertainment for people of any age and the entire station airs only high quality, family-friendly programming all day long.</p>
