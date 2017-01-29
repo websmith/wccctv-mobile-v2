@@ -1,563 +1,647 @@
 <!doctype html>
 <html>
-	<head>
-		<title>WCCC.TV</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'self' 'unsafe-inline' 'unsafe-eval'; script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
 
-		<!-- Stylesheets -->
-		<link rel="stylesheet" href="themes/wccctv.min.css">
-		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
-		<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css">
-		<link rel="stylesheet" href="css/global.css">
+<head>
+	<title>WCCC.TV</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'self' 'unsafe-inline' 'unsafe-eval'; script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
 
-		<!-- Scripts -->
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		<script>
-			var app_version = "2.4.2";
-			
-			$(document).ready(function(){
-				$('.app-version').html(app_version);
-			});
-		</script>
-	</head>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="themes/wccctv.min.css">
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/global.css">
 
-	<body>
-		<!-- HOME -->
-		<section data-role="page" data-theme="a" id="home" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="homeMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#homeMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content home-content">
-				<h1 class="page-title">Welcome to WCCC.TV</h1>
-				<h4 class="page-subtitle">Select an option below or use the menu to the right to get started</h4>
-				<ul class="home-list">
-					<li class="featured-button home-list-item">
-						<a href="#featured">
-							<span class="featured-icon home-button-icon"></span>
-							<h3>Featured Videos</h3>
-							<p>See what's popular</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#live">
-							<span class="live-icon home-button-icon"></span>
-							<h3>Live Stream</h3>
-							<p>Watch our channel live!</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#programs">
-							<span class="programs-icon home-button-icon"></span>
-							<h3>Programs</h3>
-							<p>View popular programming</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#talkshows">
-							<span class="talkshows-icon home-button-icon"></span>
-							<h3>Talk Shows</h3>
-							<p>Check out our monthly talk shows</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#citybeat">
-							<span class="citybeat-icon home-button-icon"></span>
-							<h3>City Beat</h3>
-							<p>Learn what's happening around town</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#shorts">
-							<span class="shorts-icon home-button-icon"></span>
-							<h3>Shorts</h3>
-							<p>Enjoy our short series videos</p>
-						</a>
-					</li>
-					<li class="home-list-item">
-						<a href="#meetings">
-							<span class="meetings-icon home-button-icon"></span>
-							<h3>Meetings</h3>
-							<p>Choose from a variety of official city meetings</p>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
+	<!-- Scripts -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		var app_version = "2.4.2";
 
-		<!-- FEATURED -->
-		<section data-role="page" data-theme="a" id="featured" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="featuredMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#featuredMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content featured-content">
-				<h1 class="page-title">Featured Videos</h1>
-				<h4 class="page-subtitle">See what's popular</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
+		$(document).ready(function () {
+			$('.app-version').html(app_version);
+		});
+	</script>
+</head>
 
-		<!-- LIVE -->
-		<section data-role="page" data-theme="a" id="live">
-			<aside data-role="panel" data-position="right" data-display="push" id="liveMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#liveMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content">
-				<div class="container">
-					<div class="video">
-						<iframe src="http://player.frontlayer.com/live/fl649215" width="100%" frameborder="0" class="livestream" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-					</div>
-					<div class="video-info">
-						<h1 class="single-video-title">WCCC.TV Live Stream</h1>
-						<p>Welcome to the WCCC.TV Live Stream. This is a live feed of our HD cable channel. Here you will see the shows we are airing right now!</p>
-						<p>You can also view this channel 24 hours a day on:</p>
-						<ul>
-							<li>Time Warner: Channel 10 (digital 10.10 without a cable box)</li>
-							<li>Grande: Channel 10</li>
-							<li>Grande: HD on Channel 810</li>
-						</ul>
-						<p>If you have issues with this stream for more than 5 minutes at a time, please <a href="http://wccc.tv/contact" target="_blank" class="external">let us know.</a></p>
-					</div>
+<body>
+	<!-- HOME -->
+	<section data-role="page" data-theme="a" id="home" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="homeMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#homeMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content home-content">
+			<h1 class="page-title">Welcome to WCCC.TV</h1>
+			<h4 class="page-subtitle">Select an option below or use the menu to the right to get started</h4>
+			<ul class="home-list">
+				<li class="featured-button home-list-item">
+					<a href="#featured">
+						<span class="featured-icon home-button-icon"></span>
+						<h3>Featured Videos</h3>
+						<p>See what's popular</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#live">
+						<span class="live-icon home-button-icon"></span>
+						<h3>Live Stream</h3>
+						<p>Watch our channel live!</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#programs">
+						<span class="programs-icon home-button-icon"></span>
+						<h3>Programs</h3>
+						<p>View popular programming</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#talkshows">
+						<span class="talkshows-icon home-button-icon"></span>
+						<h3>Talk Shows</h3>
+						<p>Check out our monthly talk shows</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#citybeat">
+						<span class="citybeat-icon home-button-icon"></span>
+						<h3>City Beat</h3>
+						<p>Learn what's happening around town</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#shorts">
+						<span class="shorts-icon home-button-icon"></span>
+						<h3>Shorts</h3>
+						<p>Enjoy our short series videos</p>
+					</a>
+				</li>
+				<li class="home-list-item">
+					<a href="#meetings">
+						<span class="meetings-icon home-button-icon"></span>
+						<h3>Meetings</h3>
+						<p>Choose from a variety of official city meetings</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- FEATURED -->
+	<section data-role="page" data-theme="a" id="featured" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="featuredMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#featuredMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content featured-content">
+			<h1 class="page-title">Featured Videos</h1>
+			<h4 class="page-subtitle">See what's popular</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- LIVE -->
+	<section data-role="page" data-theme="a" id="live">
+		<aside data-role="panel" data-position="right" data-display="push" id="liveMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#liveMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content">
+			<div class="container">
+				<div class="video">
+					<iframe src="http://player.frontlayer.com/live/fl649215" width="100%" frameborder="0" class="livestream" webkitallowfullscreen=""
+						mozallowfullscreen="" allowfullscreen=""></iframe>
 				</div>
-			</div>
-		</section>
-
-		<!-- VIDEO -->
-		<section data-role="page" data-theme="a" id="video">
-			<aside data-role="panel" data-position="right" data-display="push" id="videoMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#videoMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content video-content">
-				<div class="container">
-					<div id="vimeo">
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ALBUMS -->
-		<section data-role="page" data-theme="a" id="album" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="albumMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#albumMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content album-content">
-				<h1 class="page-title"></h1>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- PROGRAMS -->
-		<section data-role="page" data-theme="a" id="programs" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="programsMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#programsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content programs-content">
-				<h1 class="page-title">Programs</h1>
-				<h4 class="page-subtitle">Select a program from these series topics.</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- TALKSHOWS -->
-		<section data-role="page" data-theme="a" id="talkshows" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="talkshowsMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#talkshowsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content talkshows-content">
-				<h1 class="page-title">Talk Shows</h1>
-				<h4 class="page-subtitle">Select from these monthly talk show programs.</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- SHORTS -->
-		<section data-role="page" data-theme="a" id="shorts" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="shortsMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#shortsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content shorts-content">
-				<h1 class="page-title">Shorts</h1>
-				<h4 class="page-subtitle">Select from numerous short videos from these topics.</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- CITY BEAT -->
-		<section data-role="page" data-theme="a" id="citybeat" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="citybeatMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#citybeatMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content citybeat-content">
-				<h1 class="page-title">City Beat</h1>
-				<h4 class="page-subtitle">See news and information about the City of Waco.</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- MEETINGS -->
-		<section data-role="page" data-theme="a" id="meetings" class="album-page">
-			<aside data-role="panel" data-position="right" data-display="push" id="meetingsMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#meetingsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content meetings-content">
-				<h1 class="page-title">Meetings</h1>
-				<h4 class="page-subtitle">View Waco city council meetings, business sessions &amp; work sessions.</h4>
-				<ul class="video-list">
-				</ul>
-			</div>
-		</section>
-
-		<!-- ABOUT -->
-		<section data-role="page" data-theme="a" id="about" class="about-page inside">
-			<aside data-role="panel" data-position="right" data-display="push" id="aboutMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#aboutMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content inside-content">
-				<h1 class="page-title">About</h1>
-				<h4 class="page-subtitle">Who we are and what we do</h4>
-				<h5 class="page-subtitle">App Version: <span class="app-version"></span></h5>
-				<div class="content">
-					<p>The WCCC.TV app is a new way for our viewers to enjoy the Waco City Cable Channel programs from anywhere at anytime in full HD! The HTML5 powered application allows viewers to watch recent additions to our channel from any computer, tablet, smartphone or other mobile device.</p>
-					<p>Besides watching your favorite shows at anytime, you can also tune in to our Live Stream and view programs being aired right now. Our programs offer great entertainment for people of any age and the entire station airs only high quality, family-friendly programming all day long.</p>
-					<p>So kick back, relax, and enjoy the new WCCC.TV app - designed just for you!</p>
-					<h4><strong>History of WCCC.TV</strong></h4>
-					<p>In 1992, the City of Waco was provided with government access cable channels to use in its communication efforts. For several years, the Waco City Cable Channel aired City Council meetings, Plan Commission meetings and occasionally, a special production.</p>
-					<p>In 1999, WCCC.TV, the Waco City Cable Channel premiered a new look that would meet its mission statement: "To Educate, Inform, Entertain and Involve people in the City of Waco".</p>
-					<p>In 2008, WCCC.TV transitioned into a new era, producing programs in high definition. In December, WCCC.TV became the first and only city channel in the state of Texas to broadcast in HD. And in September, 2010, WCCC.TV's HD programming was made available to anyone in the world on our HD web-channel.</p>
-					<h4><strong>About The Waco City Cable Channel</strong></h4>
-					<p>The goal at the City of Waco is to make WCCC.TV a powerful communication tool by providing viewers informative and entertaining local programming they can't find anywhere else. To accomplish this, the station must have a professional appearance and the dependability of a network station by filling every half hour with high quality productions that entertain as well as inform our citizens about their city.</p>
-					<p>To provide the variety of programs needed to attract and maintain a viewing audience, several series have been developed. Within these series, several programs, running five to twenty-five minutes, have been produced. Each week, two programs from each series air in what is called a program "block". Within these blocks are various PSA's, music videos and a variety of over twenty short segments topics, each with interesting videos, all in high definition. Just a few series examples are Waco, a Moment in Time, Good Gardening, Volunteers Make a Difference, Serve It Up Waco and Waco's Myths and Legends.</p>
-					<p>You can tune into WCCC.TV to learn about our community in a personal way from people who care. Our producers are dedicated to bringing you the best in local programming with a variety of shows. City Beat, a weekly news program, covers city events and happenings, many of which are not covered by other local broadcast stations. Restaurant inspection scores, a city calendar and City of Waco job listings are also included in City Beat. You can learn about the wildlife, staff and volunteers at the Cameron Park Zoo in our award winning program, Step Into the Wild at the Cameron Park Zoo. WCCC.TV features Waco's rich and unique past with Waco, Gateway to Texas History and Waco Remembers. In the series Know Your City, you can learn how the city and its various departments function, making Waco a great place to live.</p>
-					<h4><strong>Facilities</strong></h4>
-					<img src="images/studio.jpg" alt="WCCC.TV studio" class="img-responsive">
-					<p>From our studios in City Hall, WCCC.TV produces a variety of talk shows including the City Talk Radio Show, that airs on three local radio stations and is replayed several times each week on WCCC.TV. City Manager Larry Groth hosts Know Your City Staff, an opportunity to meet city department directors and discover how the department functions. WCCC.TV also produces 30 minute monthly talk shows for the Greater Waco Chamber of Commerce, the Cen-Tex African-American Chamber of Commerce, the Cen-Tex Hispanic Chamber of Commerce, the Waco-McLennan County Public Health District and a program that features Waco's Police, Fire and Emergency Management staff.</p>
-					<p>WCCC.TV also produces The Waco City Council and Plan Commission meetings in HD and replays them several times each week. Unlike other TV stations, WCCC.TV records entire news conferences and special presentations to bring you the complete story. During severe weather alerts, viewers can see the same live weather radar and hear live reports from the amateur radio storm spotters that the staff in the Emergency Operations Center receive.</p>
-					<p>The quality of programs produced by WCCC.TV has earned several awards, including numerous Telly Awards received each year since 2004, and the Beacon Award - ranking WCCC.TV among the top three best city cable channels in the nation.</p>
-					<p>After you watch the Waco City Cable Channel and see the variety and quality of programming offered, you will become a member of our ever growing audience. Available in HD on Grande channel 810, in SD on Grande and Time Warner channel 10, and in HD from anywhere in the world on our web-channel and mobile apps.</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- TERMS OF USE -->
-		<section data-role="page" data-theme="a" id="terms" class="terms-page inside">
-			<aside data-role="panel" data-position="right" data-display="push" id="termsMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#termsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content inside-content">
-				<h1 class="page-title">Terms and Conditions of Use</h1>
-				<h4 class="page-subtitle">Some important things to know about using our apps</h4>
-				<div class="content">
-					<h4>1. Terms</h4>
-					<p>By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law.</p>
-					<h4>2. Use License</h4>
-					<p>Permission is granted to temporarily download one copy of the materials (information or software) on Waco City Cable Channel's web site for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+				<div class="video-info">
+					<h1 class="single-video-title">WCCC.TV Live Stream</h1>
+					<p>Welcome to the WCCC.TV Live Stream. This is a live feed of our HD cable channel. Here you will see the shows we are
+						airing right now!</p>
+					<p>You can also view this channel 24 hours a day on:</p>
 					<ul>
-						<li>modify or copy the materials;</li>
-						<li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-						<li>attempt to decompile or reverse engineer any software contained on Waco City Cable Channel's web site;</li>
-						<li>remove any copyright or other proprietary notations from the materials; or</li>
-						<li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+						<li>Time Warner: Channel 10 (digital 10.10 without a cable box)</li>
+						<li>Grande: Channel 10</li>
+						<li>Grande: HD on Channel 810</li>
 					</ul>
-					<p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by Waco City Cable Channel at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
-					<h4>3. Disclaimer</h4>
-					<p>The materials on Waco City Cable Channel's web site are provided "as is". Waco City Cable Channel makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, Waco City Cable Channel does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating to such materials or on any sites linked to this site.</p>
-					<h4>4. Limitations</h4>
-					<p>In no event shall Waco City Cable Channel or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on Waco City Cable Channel's Internet site, even if Waco City Cable Channel or a Waco City Cable Channel authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
-					<h4>5. Revisions and Errata</h4>
-					<p>The materials appearing on Waco City Cable Channel's web site could include technical, typographical, or photographic errors. Waco City Cable Channel does not warrant that any of the materials on its web site are accurate, complete, or current. Waco City Cable Channel may make changes to the materials contained on its web site at any time without notice. Waco City Cable Channel does not, however, make any commitment to update the materials.</p>
-					<h4>6. Links</h4>
-					<p>Waco City Cable Channel has not reviewed all of the sites linked to its Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Waco City Cable Channel of the site. Use of any such linked web site is at the user's own risk.</p>
-					<h4>7. Site Terms of Use Modifications</h4>
-					<p>Waco City Cable Channel may revise these terms of use for its web site at any time without notice. By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.</p>
-					<h4>8. Governing Law</h4>
-					<p>Any claim relating to Waco City Cable Channel's web site shall be governed by the laws of the State of Texas without regard to its conflict of law provisions.</p>
-					<hr>
-					<h3>General Terms and Conditions applicable to Use of a Web Site.</h3>
-					<h4>Privacy Policy</h4>
-					<p>Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.</p>
-					<p>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</p>
-					<p>We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.</p>
-					<p>We will only retain personal information as long as necessary for the fulfillment of those purposes.</p>
-					<p>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</p>
-					<p>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</p>
-					<p>We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
-					<p>We will make readily available to customers information about our policies and practices relating to the management of personal information.</p>
-					<p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</p>
+					<p>If you have issues with this stream for more than 5 minutes at a time, please <a href="http://wccc.tv/contact" target="_blank"
+							class="external">let us know.</a></p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- WEB APP -->
-		<section data-role="page" data-theme="a" id="webapp" class="webapp-page inside">
-			<aside data-role="panel" data-position="right" data-display="push" id="webappMenu" class="mainmenu">
-				<ul data-role="listview" data-inset="false" data-icon="false">
-					<li><a href="#home" data-transition="fade">home</a></li>
-					<li><a href="#featured" data-transition="fade">featured</a></li>
-					<li><a href="#live" data-transition="fade">live</a></li>
-					<li data-role="list-divider">watch</li>
-					<li><a href="#programs" data-transition="fade">programs</a></li>
-					<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
-					<li><a href="#shorts" data-transition="fade">shorts</a></li>
-					<li><a href="#citybeat" data-transition="fade">city beat</a></li>
-					<li><a href="#meetings" data-transition="fade">meetings</a></li>
-					<li data-role="list-divider">discover</li>
-					<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
-					<li><a href="#terms" data-transition="fade">terms of use</a></li>
-					<li><a href="#webapp" data-transition="fade">our web app</a></li>
-				</ul>
-			</aside>
-			<header data-role="header">
-				<img src="images/logo.png" alt="wccc.tv logo" class="logo">
-				<a href="#webappMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn" data-corner="false">Menu</a>
-				<div class="cl"></div>
-			</header>
-			<div role="main" class="ui-content inside-content">
-				<h1 class="page-title">WCCC.TV Web App</h1>
-				<h4 class="page-subtitle">Check out our web application</h4>
-				<div class="content">
-					<p>The WCCC.TV web app offers the full experience of WCCC.TV. The app gives you access to hundreds of videos and albums via our beautiful, responsive website. The site is designed to work perfectly on any modern device or browser including desktops, tablets, smartphones, and more.</p>
-					<p>Enjoy the wccc.tv web app today!</p>
-					<p class="btn"><a href="http://wccc.tv" class="external">Take me to the web app</a></p>
+	<!-- VIDEO -->
+	<section data-role="page" data-theme="a" id="video">
+		<aside data-role="panel" data-position="right" data-display="push" id="videoMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#videoMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content video-content">
+			<div class="container">
+				<div id="vimeo">
+
 				</div>
 			</div>
-		</section>
-	</body>
+		</div>
+	</section>
+
+	<!-- ALBUMS -->
+	<section data-role="page" data-theme="a" id="album" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="albumMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#albumMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content album-content">
+			<h1 class="page-title"></h1>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- PROGRAMS -->
+	<section data-role="page" data-theme="a" id="programs" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="programsMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#programsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content programs-content">
+			<h1 class="page-title">Programs</h1>
+			<h4 class="page-subtitle">Select a program from these series topics.</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- TALKSHOWS -->
+	<section data-role="page" data-theme="a" id="talkshows" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="talkshowsMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#talkshowsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content talkshows-content">
+			<h1 class="page-title">Talk Shows</h1>
+			<h4 class="page-subtitle">Select from these monthly talk show programs.</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- SHORTS -->
+	<section data-role="page" data-theme="a" id="shorts" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="shortsMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#shortsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content shorts-content">
+			<h1 class="page-title">Shorts</h1>
+			<h4 class="page-subtitle">Select from numerous short videos from these topics.</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- CITY BEAT -->
+	<section data-role="page" data-theme="a" id="citybeat" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="citybeatMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#citybeatMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content citybeat-content">
+			<h1 class="page-title">City Beat</h1>
+			<h4 class="page-subtitle">See news and information about the City of Waco.</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- MEETINGS -->
+	<section data-role="page" data-theme="a" id="meetings" class="album-page">
+		<aside data-role="panel" data-position="right" data-display="push" id="meetingsMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#meetingsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content meetings-content">
+			<h1 class="page-title">Meetings</h1>
+			<h4 class="page-subtitle">View Waco city council meetings, business sessions &amp; work sessions.</h4>
+			<ul class="video-list">
+			</ul>
+		</div>
+	</section>
+
+	<!-- ABOUT -->
+	<section data-role="page" data-theme="a" id="about" class="about-page inside">
+		<aside data-role="panel" data-position="right" data-display="push" id="aboutMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#aboutMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content inside-content">
+			<h1 class="page-title">About</h1>
+			<h4 class="page-subtitle">Who we are and what we do</h4>
+			<h5 class="page-subtitle">App Version: <span class="app-version"></span></h5>
+			<div class="content">
+				<p>The Waco City Cable Channel began broadcasting in June of 1992 on Time Warner Cable from studios in the Waco Convention
+					Center. In 1999, Grande Communications began carrying our channel and in December 2008 we became the first city in the
+					U.S. to air programming in High Definition and held that unique distinction for at least four years. Getting this HD
+					channel was a result of producing award winning all local programming that none of the other five local network broadcast
+					stations were doing. We also were recognized in 2006 as one of the top three City Channels in the nation by the National
+					Cable Access Guild.</p>
+
+				<p>In addition to fulfilling our responsibility to bring local government meetings and other programming about the city
+					of Waco to our citizens, the Waco City Cable Channel has produced hundreds of all local programs to educate, inform
+					and entertain our citizens about their city. For example, our <strong>Waco Gateway to Texas History</strong> series
+					has several hundred programs that tell fascinating stories of Waco’s history. Our <strong>Museums of Waco</strong> series
+					allows viewers to see the more than 20 museums in our city and highlights traveling exhibits that come to town. Our
+					<strong>Around Waco</strong> features stories of unique businesses, hobbies, places and people in our city. Our <strong>For Your Health and Safety</strong>					series features programs about those things that are so important to everyone to lead a happy, healthy life. In our
+					<strong>Waco Remembers</strong> series, people describe the way it was in the early days not only in our city but we’ve
+					been able to capture the compelling war stories of many of our veterans who have served our country and document their
+					lives for future generations.</p>
+
+				<p><a href="#video" data-videoid="187067851" class="thumb" data-transition="fade"><img src="images/studio-new.jpg" alt="The History of WCCCTV" class="img-responsive"></a></p>
+
+				<p>To keep our citizens informed on the latest happenings, our <strong>City Beat News Report</strong> is a weekly half hour
+					news report with stories of city happenings that often are not covered by the other broadcast stations. It includes
+					the weekly Restaurant Food Scores from the Waco McLennan County Public Health district, latest features of the city’s
+					website and social media outlets, a listing of press release the city sent out during the week and announcements of
+					services and events the City is providing.</p>
+
+				<p>During each half hour throughout the day we include one of the City Beat stories as a <strong>City Beat News Brief</strong>					as one of the many short segments we have to fill each half hour with entertaining, informative programming. We have
+					a huge assortment of other short segments that you’ll see sprinkled throughout the day that come from more than 20 different
+					segments like a feature on various <strong>Volunteers</strong> and agencies that give of their time and service to our
+					community... <strong>Good Gardening</strong> tips... <strong>Historic Markers</strong> around town,….an inside look at locally own
+					restaurants as they <strong>Serve it Up Waco</strong>... a visit to shops and restaurants <strong>On the Avenue</strong>					in downtown Waco... an interesting <strong>Moment in Time</strong> in Waco’s history... unique <strong>Local Sports Features</strong>...
+					and <strong>Music Videos</strong> produced from the Brazos Nights concerts series. And we can’t forget one of our more
+					popular short segments... <strong>Images of Waco</strong> where for a brief moment you get to see and hear the beautiful
+					and unique images from somewhere in Waco.</p>
+
+				<p>And if that wasn’t enough programming about your city, we produce ten monthly 30 minutes talk shows in our HD studio.
+					These include: <strong>Community in Focus</strong> from the Cooper Foundation, <strong>The Giving Connection</strong>					from the Waco Foundation... <strong>Health Wise</strong> from the Waco McLennan County Public Health District, <strong>Home Is Where Our Heart Is</strong>	from the City’s Housing and Community development department... <strong>The Prosper Waco</strong> initiative... <strong>Chamber Connection</strong>					from the Greater Waco Chamber, <strong>Noticias</strong> from the Hispanic Chamber and <strong>Community Wise</strong>	from the African American Chamber... and <strong>For Your Safety</strong> featuring Waco Police, Fire and Emergency
+					Management information. We also produce <strong>Medicare and You</strong> featuring staff from the Dallas office of
+					Medicare and Medicaid that we distribute to more than fifty other cities to air on their channels.</p>
+
+				<p>Our channel has exclusive rights to bring our viewers the full Brazos Nights concerts from downtown Waco and we also
+					take you to LIVE events like the Winter Wonderland, Cultural Arts Fest, the HOT Fair in the fall, and the annual Veteran’s
+					Day Parade through downtown Waco. We’re so much more than a typical city cable channel. In fact you can watch all of
+					our programming several others ways, like on the web through our website at WCCC.TV or our mobile app available free
+					from the Apple store. From there you can watch our live stream of all of the same programs as they are airing live on
+					the cable and you can even call up all of the programs and short subject on demand whenever you want. And we’re not
+					through expanding your viewing options. We now have a RoKu channel available on the internet and we’re continuing to
+					look for the latest way to bring our programming to YOU. So start enjoying all of the local programming being created
+					to educate, inform and entertain you about YOUR city. We are the Waco City Cable Channel.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- TERMS OF USE -->
+	<section data-role="page" data-theme="a" id="terms" class="terms-page inside">
+		<aside data-role="panel" data-position="right" data-display="push" id="termsMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#termsMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content inside-content">
+			<h1 class="page-title">Terms and Conditions of Use</h1>
+			<h4 class="page-subtitle">Some important things to know about using our apps</h4>
+			<div class="content">
+				<h4>1. Terms</h4>
+				<p>By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable
+					laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not
+					agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this
+					web site are protected by applicable copyright and trade mark law.</p>
+				<h4>2. Use License</h4>
+				<p>Permission is granted to temporarily download one copy of the materials (information or software) on Waco City Cable
+					Channel's web site for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer
+					of title, and under this license you may not:</p>
+				<ul>
+					<li>modify or copy the materials;</li>
+					<li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+					<li>attempt to decompile or reverse engineer any software contained on Waco City Cable Channel's web site;</li>
+					<li>remove any copyright or other proprietary notations from the materials; or</li>
+					<li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+				</ul>
+				<p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by Waco City
+					Cable Channel at any time. Upon terminating your viewing of these materials or upon the termination of this license,
+					you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
+				<h4>3. Disclaimer</h4>
+				<p>The materials on Waco City Cable Channel's web site are provided "as is". Waco City Cable Channel makes no warranties,
+					expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties
+					or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or
+					other violation of rights. Further, Waco City Cable Channel does not warrant or make any representations concerning
+					the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating
+					to such materials or on any sites linked to this site.</p>
+				<h4>4. Limitations</h4>
+				<p>In no event shall Waco City Cable Channel or its suppliers be liable for any damages (including, without limitation,
+					damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the
+					materials on Waco City Cable Channel's Internet site, even if Waco City Cable Channel or a Waco City Cable Channel authorized
+					representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions
+					do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages,
+					these limitations may not apply to you.</p>
+				<h4>5. Revisions and Errata</h4>
+				<p>The materials appearing on Waco City Cable Channel's web site could include technical, typographical, or photographic
+					errors. Waco City Cable Channel does not warrant that any of the materials on its web site are accurate, complete, or
+					current. Waco City Cable Channel may make changes to the materials contained on its web site at any time without notice.
+					Waco City Cable Channel does not, however, make any commitment to update the materials.</p>
+				<h4>6. Links</h4>
+				<p>Waco City Cable Channel has not reviewed all of the sites linked to its Internet web site and is not responsible for
+					the contents of any such linked site. The inclusion of any link does not imply endorsement by Waco City Cable Channel
+					of the site. Use of any such linked web site is at the user's own risk.</p>
+				<h4>7. Site Terms of Use Modifications</h4>
+				<p>Waco City Cable Channel may revise these terms of use for its web site at any time without notice. By using this web
+					site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.</p>
+				<h4>8. Governing Law</h4>
+				<p>Any claim relating to Waco City Cable Channel's web site shall be governed by the laws of the State of Texas without
+					regard to its conflict of law provisions.</p>
+				<hr>
+				<h3>General Terms and Conditions applicable to Use of a Web Site.</h3>
+				<h4>Privacy Policy</h4>
+				<p>Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we
+					collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.</p>
+				<p>Before or at the time of collecting personal information, we will identify the purposes for which information is being
+					collected.
+				</p>
+				<p>We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us
+					and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.</p>
+				<p>We will only retain personal information as long as necessary for the fulfillment of those purposes.</p>
+				<p>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of
+					the individual concerned.</p>
+				<p>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes,
+					should be accurate, complete, and up-to-date.</p>
+				<p>We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized
+					access, disclosure, copying, use or modification.</p>
+				<p>We will make readily available to customers information about our policies and practices relating to the management of
+					personal information.</p>
+				<p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality
+					of personal information is protected and maintained.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- WEB APP -->
+	<section data-role="page" data-theme="a" id="webapp" class="webapp-page inside">
+		<aside data-role="panel" data-position="right" data-display="push" id="webappMenu" class="mainmenu">
+			<ul data-role="listview" data-inset="false" data-icon="false">
+				<li><a href="#home" data-transition="fade">home</a></li>
+				<li><a href="#featured" data-transition="fade">featured</a></li>
+				<li><a href="#live" data-transition="fade">live</a></li>
+				<li data-role="list-divider">watch</li>
+				<li><a href="#programs" data-transition="fade">programs</a></li>
+				<li><a href="#talkshows" data-transition="fade">talk shows</a></li>
+				<li><a href="#shorts" data-transition="fade">shorts</a></li>
+				<li><a href="#citybeat" data-transition="fade">city beat</a></li>
+				<li><a href="#meetings" data-transition="fade">meetings</a></li>
+				<li data-role="list-divider">discover</li>
+				<li><a href="#about" data-transition="fade">about wccc.tv</a></li>
+				<li><a href="#terms" data-transition="fade">terms of use</a></li>
+				<li><a href="#webapp" data-transition="fade">our web app</a></li>
+			</ul>
+		</aside>
+		<header data-role="header">
+			<img src="images/logo.png" alt="wccc.tv logo" class="logo">
+			<a href="#webappMenu" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-b ui-btn-inline ui-menu-btn ui-btn-right menu-btn"
+				data-corner="false">Menu</a>
+			<div class="cl"></div>
+		</header>
+		<div role="main" class="ui-content inside-content">
+			<h1 class="page-title">WCCC.TV Web App</h1>
+			<h4 class="page-subtitle">Check out our web application</h4>
+			<div class="content">
+				<p>The WCCC.TV web app offers the full experience of WCCC.TV. The app gives you access to hundreds of videos and albums
+					via our beautiful, responsive website. The site is designed to work perfectly on any modern device or browser including
+					desktops, tablets, smartphones, and more.</p>
+				<p>Enjoy the wccc.tv web app today!</p>
+				<p class="btn"><a href="http://wccc.tv" class="external">Take me to the web app</a></p>
+			</div>
+		</div>
+	</section>
+</body>
+
 </html>
