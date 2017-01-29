@@ -36,8 +36,8 @@
 	<gap:splash src="images/startup/startup-ipad-large-landscape.png" gap:platform="ios" width="2048" height="1496" />
 	<gap:splash src="images/startup/startup-ipad-large-portrait.png" width="1536" height="2008" />
 
-	<gap:plugin name="org.apache.cordova.statusbar" version="2.2.1" />
-	<plugin name="cordova-plugin-whitelist" version="1"/>
+	<plugin name="org.apache.cordova.statusbar" version="2.2.1" />
+	<plugin name="cordova-plugin-whitelist" version="1" />
 
 	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="orientation" value="portrait" />
