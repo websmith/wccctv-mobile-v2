@@ -2,8 +2,8 @@
 <widget xmlns   	= "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id = "com.holeintheroof.wccctv"
-		versionCode = "15"
-		version     = "2.4.3">
+		versionCode = "16"
+		version     = "2.5">
 
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
@@ -39,7 +39,6 @@
 	<plugin name="org.apache.cordova.statusbar" version="2.2.1" />
 	<plugin name="cordova-plugin-whitelist" version="1" />
 
-	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="orientation" value="portrait" />
 	<preference name="permissions" value="none" />
 	<preference name="exit-on-suspend" value="true" />
