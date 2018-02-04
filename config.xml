@@ -3,7 +3,7 @@
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id = "com.holeintheroof.wccctv"
 		versionCode = "16"
-		version     = "2.5.1">
+		version     = "2.5.2">
 
 	<gap:platform name="ios" />
 	<gap:platform name="android" />
@@ -19,13 +19,27 @@
 		Apparatus Digital Creative Agency
 	</author>
 
-	<icon src="images/touch/icon-android.png" gap:platform="android" />
-	<icon src="images/touch/icon-non-retina.png" gap:platform="ios" width="57" height="57" />
-	<icon src="images/touch/icon-iphone-retina.png" gap:platform="ios" width="72" height="72" />
-	<icon src="images/touch/icon-ipad-retina.png" gap:platform="ios" width="114" height="114" />
-	<icon src="images/touch/icon.png" gap:platform="ios" width="76" height="76" />
-	<icon src="images/touch/Icon-Small@2x.png" gap:platform="ios" width="120" height="120" />
-	<icon src="images/touch/Icon@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="images/icons/Icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+    <icon src="images/icons/Icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+    <icon src="images/icons/Icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="images/icons/Icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="images/icons/Icon-83.5@2x.png" gap:platform="ios" width="167" height="167" />
+    <icon src="images/icons/Icon-Small-40.png" gap:platform="ios" width="40" height="40" />
+    <icon src="images/icons/Icon-Small-40@2x.png" gap:platform="ios" width="80" height="80" />
+    <icon src="images/icons/Icon-Small-40@3x.png" gap:platform="ios" width="120" height="120" />
+    <icon src="images/icons/Icon-Small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="images/icons/Icon-Small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="images/icons/Icon-Small@3x.png" gap:platform="ios" width="87" height="87" />
+    <icon src="images/icons/iTunesArtwork" gap:platform="ios" width="512" height="512" />
+    <icon src="images/icons/iTunesArtwork@2x" gap:platform="ios" width="1024" height="1024" />
+    <icon src="images/icons/Icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="images/icons/Icon@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="images/icons/Icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="images/icons/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="images/icons/Icon-Small-50.png" gap:platform="ios" width="50" height="50" />
+    <icon src="images/icons/Icon-Small-50@2x.png" gap:platform="ios" width="100" height="100" />
+	<icon src="images/icons/icon-android.png" gap:platform="android" />
 
 	<gap:splash src="splash.png" />
 	<gap:splash src="images/startup/splash.png" width="320" height="460" />
